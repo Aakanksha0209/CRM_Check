@@ -10,6 +10,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "font-awesome": "^4.7.0",
     "process": "^0.11.10",
@@ -20,8 +21,8 @@
     "react-scripts": "5.0.1",
     "simple-peer": "^9.11.1",
     "simplewebrtc": "^3.0.2",
-    "socket.io": "^4.7.1",
-    "socket.io-client": "^4.6.2",
+    "socket.io": "^4.7.2",
+    "socket.io-client": "^4.7.2",
     "web-vitals": "^2.1.4",
     "webrtc": "^1.14.1"
   },

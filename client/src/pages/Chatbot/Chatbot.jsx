@@ -17,7 +17,7 @@ import { Routes, Route, Navigate, useLocation, useNavigate } from "react-router-
 import Peer from 'simple-peer';
 const Chatbot = (props) => {
     const { socket } = props;
-    
+
     const [currentmsg, setCurrentmsg] = useState({ chat_flag: "", msg: "", room: "", date: "", profile_image: "", username: "" });
     const user = JSON.parse(localStorage.getItem('user'));
     const { currUser, setcurrUser } = useContext(UserContext);
@@ -47,9 +47,10 @@ const Chatbot = (props) => {
             await socket.emit("send_message", msg_data);
         }
 
+
+
+
     }
-
-
     const joinRoom = (name, username) => {
         socket.emit("join_room", { room: `${name}@${username}`, username: username });
         setRoom(`${name}@${username}`);
@@ -96,8 +97,6 @@ const Chatbot = (props) => {
     }
     const handleDisconnect = () => {
         // console.log(support_log);
-        handleReview(1);
-
 
         socket.emit("disconnect_support", { room: room, socket_id: socket.id });
         socket.on("logSupport", (review) => {
@@ -143,6 +142,7 @@ const Chatbot = (props) => {
             })
         }
     }, [])
+
 
     return (
         <>

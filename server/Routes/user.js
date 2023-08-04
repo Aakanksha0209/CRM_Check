@@ -58,7 +58,7 @@ router.post('/addUser',(req,res)=>{
 
     const login_id = crypto.randomUUID()
     // res.send(data);
-    client.query(`insert into Login_Data (login_id,name,username,password,email,phone_no,profile_image,designation,isonline) values('${login_id}','${data.name}','${data.username}','${data.password}','${data.email}','${data.phone_no}','${data.profile_image}','1','0')`,(error,result)=>{
+    client.query(`insert into Login_Data (login_id,name,username,password,email,phone_no,profile_image,designation,isonline) values('${login_id}','${data.name}','${data.username}','${data.password}','${data.email}','${data.phone_no}','${data.profile_image}','${data.designation}','0')`,(error,result)=>{
         if(error){
             res.status(500).send(error);
         }else{
