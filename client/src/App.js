@@ -6,6 +6,7 @@ import { ChatBotContext } from "./contexts/ChatBotContext";
 import { UserContext } from "./contexts/UserContext";
 import Authentication from "./pages/Authentication";
 import Admin from "./pages/Admin";
+import CRMDashboard from "./pages/CRMDashboard"
 import User from "./pages/User";
 import Videocall from "./pages/Videocall";
 import Chatbot from "./pages/Chatbot/Chatbot";
@@ -69,10 +70,10 @@ function App() {
 
     <VideoCallContext.Provider value={{stream,setStream,receivingCall,setReceivingCall,caller,setCaller,callerSignal,setCallerSignal,callAccepted,setCallAccepted,idToCall,setIdToCall,callEnded,setCallEnded,name,setName,myVideo,userVideo,socket}}>
     {/* {location.pathname!='/' && location.pathname!='/authentication' && location.pathname!='/videocall' && user &&  <Navbar/>} */}
-    {location.pathname!='/' && location.pathname!='/authentication' && user && <MessageDialogue socket={socket} />}
+    {location.pathname!='/' && location.pathname!='/authentication' && user && <MessageDialogue/>}
        <Routes>
    
-         <Route path="/" exact element={<Navigate to="/authentication" replace />} />
+         <Route path="/" element={<Navigate to="/authentication" replace />} />
         <Route path="/authentication" element={<Authentication/>}/>
        
         {

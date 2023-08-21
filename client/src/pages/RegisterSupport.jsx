@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 const Register = (props) => {
     const { settoggle } = props;
     const naviagte = useNavigate();
-    const [data, setdata] = useState({ name: "", username: "", email: "", password: "", phone_no: "", profile_image: "" });
+    const [data, setdata] = useState({ name: "", emp_id: "", email: "", password: "", contact_no: ""});
     const convertBase64 = (file) => {
         return new Promise((resolve, reject) => {
             const fileReader = new FileReader();
@@ -58,9 +58,9 @@ const Register = (props) => {
                             <input className="p-2 mt-8 rounded-xl border" type="text" name="name" placeholder="Name" onChange={(e) => {
                                 setdata({ ...data, name: e.target.value })
                             }} />
-                            <input className="p-2  rounded-xl border" type="text" name="username" placeholder="Username" onChange={(e) => {
+                            {/* <input className="p-2  rounded-xl border" type="text" name="username" placeholder="Username" onChange={(e) => {
                                 setdata({ ...data, username: e.target.value })
-                            }} />
+                            }} /> */}
                             <input className="p-2  rounded-xl border" type="email" name="email" placeholder="Email" onChange={(e) => {
                                 setdata({ ...data, email: e.target.value })
                             }} />
