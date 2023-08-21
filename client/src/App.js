@@ -13,17 +13,19 @@ import UserSupport from "./pages/UserSupport";
 import Logs from "./pages/Logs";
 import Logss from "./pages/Logss";
 import RegisterSupport from "./pages/RegisterSupport";
+import Profile from "./pages/Profile";
 import Suppdash from "./pages/Suppdash";
 import { Navbar } from "./components/Navbar";
 import axios from "axios";
 // import RegistrationForm from "./pages/RegistrationForm";
 import io from "socket.io-client"
+import MessageDialogue from "./pages/Messagedialog";
 let socket = io.connect("http://localhost:5000");
 function App() {
   const location=useLocation();
   const user = localStorage.getItem('user')?JSON.parse(localStorage.getItem('user')):null;
   //user states
-  const [currUser, setcurrUser] = useState({name:"",username:"",email:"",designation:"",profile_image:"",phone_no:""});
+  const [currUser, setcurrUser] = useState({name:"",emp_id:"",email:"",designation:"",contact_no:""});
   //chat states
   const [vis, setvis] = useState(0);
   const [chat, setchat] = useState([]);
@@ -67,14 +69,18 @@ function App() {
 
     <VideoCallContext.Provider value={{stream,setStream,receivingCall,setReceivingCall,caller,setCaller,callerSignal,setCallerSignal,callAccepted,setCallAccepted,idToCall,setIdToCall,callEnded,setCallEnded,name,setName,myVideo,userVideo,socket}}>
     {/* {location.pathname!='/' && location.pathname!='/authentication' && location.pathname!='/videocall' && user &&  <Navbar/>} */}
-    {location.pathname!='/' && location.pathname!='/authentication' && user && <Chatbot socket={socket} />}
+    {location.pathname!='/' && location.pathname!='/authentication' && user && <MessageDialogue socket={socket} />}
        <Routes>
    
          <Route path="/" exact element={<Navigate to="/authentication" replace />} />
         <Route path="/authentication" element={<Authentication/>}/>
        
         {
-          user && currUser.designation==='0' && <Route path="/user" element={!localStorage.getItem('user') ?<Navigate to="/authentication" replace />: <User socket={socket}/>}/>
+          user && currUser.designation==='0' && <>
+          <Route path="/user" element={!localStorage.getItem('user') ?<Navigate to="/authentication" replace />: <User socket={socket}/>}/>
+          <Route path="/profile" element={!localStorage.getItem('user') ?<Navigate to="/authentication" replace />: <Profile socket={socket}/>}/>
+          <Route path="/home" element={!localStorage.getItem('user') ?<Navigate to="/authentication" replace />: <User socket={socket}/>}/>
+          </>
         }
        
         {user && <Route path="/videocall" element={!localStorage.getItem('user') ?<Navigate to="/authentication" replace />: <Videocall socket={socket}/>}/>}

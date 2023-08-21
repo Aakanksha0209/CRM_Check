@@ -1,0 +1,124 @@
+.login{
+    margin-top: 4%;
+    margin-left: 25%;
+    margin-right: 25%;
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid grey; */
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px 1px rgba(7, 7, 7, 0.5);
+    backdrop-filter: 0.5;
+
+}
+
+.login-left{
+    width: 50%;
+    /* background-color: red; */
+    background:linear-gradient(90deg,rgba(176,42,79,1)0%,rgba(52,38,99,1)100%);
+    border-radius: 5px;
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.login-left img{
+    height: 90px;
+    width: 200px;
+    border-radius: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 140px;
+}
+.login-left h1{
+    color: white;
+    font-size: 26px;
+    align-content: center;
+    margin-left: 45px;
+}
+
+.login-right{
+    width: 50%;
+    background-color: #f1f1f1;
+    align-content: center;
+    border-radius: 5px;
+}
+.login-right .login-img{
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.login-right .login-input-select{
+    width: 265px;
+    font-size: 14px;
+    border: none ;
+    padding: 6px;
+    margin-top: 30px;
+    margin-left: 25px;
+    font-weight: 200;
+}
+
+.login-right .login-input{
+    width: 250px;
+    font-size: 14px;
+    border: none ;
+    padding: 6px;
+    margin-top: 35px;
+    margin-left: 25px;
+    font-weight: 200;
+    /* border-radius: 10px; */
+
+}
+
+.login-right .login-btn{
+    color: white;
+    padding: 8px;
+    width: 250px;
+    margin-top: 30px;
+    margin-left: 34px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+    background:linear-gradient(90deg,rgba(176,42,79,1)0%,rgba(52,38,99,1)100%);
+    text-align: center;
+    border-radius: 18px;
+    cursor: pointer;
+    border: 1px solid;
+}
+
+.register-login-button{
+    cursor: pointer;
+
+}
+
+
+.no-account{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px
+}
+
+.no-account h5{
+    font-size: 14px;
+    color: blue;
+}
+
+.no-account Link{
+    text-decoration: none;
+}
+
+.no-account button{
+    color: white;
+    width: 90px;
+    height: 30px;
+    font-size: 16px;
+    background:linear-gradient(90deg,rgba(176,42,79,1)0%,rgba(52,38,99,1)100%);
+    text-align: center;
+    border-radius: 18px;
+    border: 1px solid;
+    margin-top: 18px;
+    margin-left: 26px;
+    /* margin-right: 12px; */
+}

@@ -1,0 +1,334 @@
+
+
+.user_logout {
+    padding: 10px 15px;
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    border: none;
+    float: right;
+    margin-right: 30px;
+    margin-top: -25px;
+    cursor: pointer;
+}
+
+.user_logout:hover {
+    font-size: 20px;
+}
+
+#image2 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#image {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    height: 100px;
+    /* background-color: #007bff; */
+    /* color: #fff; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 999;
+
+    &:hover::after {
+        content: "Profile Picture";
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #000;
+        color: #fff;
+        font-size: 12px;
+        padding: 4px 8px;
+        border-radius: 5px;
+        opacity: 0.8;
+        pointer-events: none;
+    }
+}
+
+.chatbox__image--header {
+    margin-right: 10px;
+}
+
+.chatbox__heading--header {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.chatbox__description--header {
+    font-size: .9rem;
+    color: white;
+    margin-left: -60px;
+}
+
+.tellbutton {
+    border-radius: 10px;
+    margin-top: 10px;
+    color: #fff;
+    padding: 8px 12px;
+    background-color: #2a2076;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 6px;
+}
+
+#clearclick {
+    padding: 8px 12px;
+    background-color: #2a2076;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.button-container .button {
+    padding: 8px 12px;
+    background-color: #7b2647;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 4px;
+    /* gap: 8px; */
+
+}
+
+.Predefined {
+    align-items: center;
+}
+
+.chat-container {
+    position: fixed;
+    bottom: 100px;
+    right: 40px;
+    max-width: 350px;
+    padding: 10px;
+    /* background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593); */
+    background: linear-gradient(90deg, rgba(176, 42, 79, 1) 0%, rgba(52, 38, 99, 1) 100%);
+    border-radius: 12px;
+    /* height: 500px; */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ActionButton {
+    padding: 6px 8px;
+    background-color: black;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ActionButtonsContainer {
+    display: flex;
+    background-color: black;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.chatbox {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 300px;
+    width: 300px;
+    overflow-y: scroll;
+}
+
+
+
+.user-input {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.chatbox .user-message {
+    /* background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593); */
+    background: linear-gradient(90deg, rgba(238, 175, 193, 0.2) 0, rgba(167, 158, 236, 0.2) 100%);
+    color: black;
+}
+
+.message {
+
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    max-width: 70%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.inputtext {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.send-button {
+    padding: 8px 12px;
+    background-color: #2a2076;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.QuestionButton {
+    margin: 5px;
+    padding: 8px 12px;
+    background-color: #2a2076;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+        background-color: #2a2076;
+    }
+}
+
+.ClearButton {
+    padding: 8px 12px;
+    background-color: #2a2076;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ButtonContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.chatheader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.fixed-action-button {
+    border-radius: 10px;
+    color: #fff;
+    padding: 8px 12px;
+    /* background: linear-gradient(90deg, rgba(176, 42, 79, 1) 0%, rgba(52, 38, 99, 1) 100%); */
+    /* background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593); */
+    /* background-color: black; */
+    background-color: rgb(42, 32, 118);
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 8px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+
+.input-button {
+    /* background-color: rgb(42, 32, 118); */
+    width: 170px;
+    background-color: rgb(42, 32, 118);
+    /* margin-left: 50px; */
+    border-radius: 10px;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 8px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.upload-button {
+    background-color: rgb(42, 32, 118);
+    margin-left: 50px;
+    border-radius: 10px;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 8px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.aakanksha input #file-upload-button {
+    background-color: #2a2076;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    margin-top: 81px;
+    background: linear-gradient(90deg, rgba(176, 42, 79, 1) 0%, rgba(56, 38, 99, 1) 100%);
+    color: #fff;
+    transition: left 0.3s ease-in-out;
+}
+
+.sidebar::after {}
+
+.sidebar.open {
+    left: 0;
+}
+
+.toggle-button {
+    cursor: pointer;
+    color: white;
+    /* margin: 100px; */
+    position: fixed;
+    margin-top: 25px;
+    margin-left: 20px;
+    /* margin-top: 50%; */
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+}
+
+.sidebar-nav li {
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.sidebar-nav li:hover {
+    color: #00aaff;
+    cursor: pointer;
+}
+
+.main-content {
+    margin-left: 0;
+    /* Start with zero margin */
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.sidebar.open~.user {
+    margin-left: 250px;
+    /* Push the main content when sidebar is open */
+}
