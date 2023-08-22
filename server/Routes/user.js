@@ -39,7 +39,7 @@ router.get('/onlineCustomerSupport',(req,res)=>{
 
 router.post('/getUserByAuth',async(req,res)=>{
     const data=req.body;
-    await client.query(`select * from login_data where email='${data.email}' and password='${data.password}'`,(error,result)=>{
+    client.query(`select * from login_data where email='${data.email}' and password='${data.password}'`,(error,result)=>{
         if(error){
                    res.status(500).send(error);
         }else{
